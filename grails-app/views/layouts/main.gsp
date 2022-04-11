@@ -1,73 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
+<%--
+this is the basic layout with only the IMOD header and footer
+--%>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js">
+<!--<![endif]-->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>
-        <g:layoutTitle default="Grails"/>
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
+	<title>
+		<g:layoutTitle default="IMOD"/>
+	</title>
 
-    <asset:stylesheet src="application.css"/>
+	<meta charset="utf-8" />
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <g:layoutHead/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="shortcut icon" href="${resource(dir: 'images', file: 'colorsymbol_sml.png')}" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'colorsymbol_sml.png')}" />
+	<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'colorsymbol_sml.png')}" sizes="114x114" />
+
+	<!-- style libraries -->
+	<g:external dir="bower_components/jquery.ui/themes/base" file="all.css" />
+	<g:external dir="bower_components/qtip2" file="jquery.qtip.min.css" />
+	<g:external dir="bower_components/jstree/dist/themes/default" file="style.min.css" />
+	<g:external dir="bower_components/fontawesome/css" file="font-awesome.min.css" />
+	<g:external dir="bower_components/ubuntu-fontface" file="ubuntu.css" />
+	<g:external dir="bower_components/tooltipster/css" file="tooltipster.css" />
+	<g:external dir="bower_components/tooltipster/css/themes" file="tooltipster-noir.css" />
+
+	<!-- internal styling -->
+	<g:external dir="css" file="main.css" />
+
+	<!-- core javascript libraries -->
+	<!-- <g:external dir="bower_components/jquery/dist" file="jquery.min.js" /> @Wesley.Coomber@asu.edu change for temporary working on my branch. Calender plugin doesn work with jquery 3.0!-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+	<g:external dir="bower_components/jquery.ui/ui" file="core.js" />
+	<g:external dir="bower_components/jquery.ui/ui" file="widget.js" />
+
+	<!-- ui widgets -->
+	<g:external dir="bower_components/jquery.ui/ui" file="accordion.js" />
+	<g:external dir="bower_components/jquery.ui/ui" file="button.js" />
+	<g:external dir="bower_components/jquery.ui/ui" file="dialog.js" />
+	<g:external dir="bower_components/jquery.ui/ui" file="progressbar.js" />
+
+	<!-- plugins to javascript libraries -->
+	<g:external dir="bower_components/qtip2" file="jquery.qtip.min.js" />
+	<g:external dir="bower_components/Chart.js" file="Chart.js" />
+	<g:external dir="bower_components/jstree/dist" file="jstree.min.js" />
+	<g:external dir="bower_components/jquery.validate/dist" file="jquery.validate.min.js" />
+	<g:external dir="bower_components/jquery.maskedinput/dist" file="jquery.maskedinput.min.js" />
+	<g:external dir="js/plugins" file="jquery.custom.draggable.js"/>
+	<g:external dir="bower_components/tooltipster/js" file="jquery.tooltipster.min.js" />
+
+	<!-- internal javascript -->
+	<g:javascript src="source/application.js"/>
+
+	<g:layoutHead/>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/#"><asset:image src="grails.svg" alt="Grails Logo"/></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div id="navbar">
+	<div id="imodlogo" role="banner">
+		<a href="${createLink(uri: '/')}">
+			<g:img dir="images" file="imods_white_condensed.png" id="imod-logo" alt="imod"/>
+		</a>
+	</div>
 
-        <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-            <ul class="nav navbar-nav ml-auto">
-                <g:pageProperty name="page.nav"/>
-            </ul>
-        </div>
-    </div>
-</nav>
+	<div id="nav-links">
+		<ul>
+			<g:if test="${session.isAdmin}">
+				<li>
+					<a class="admin-link" href="${createLink(uri: '/admin/assessment')}">
+						<i class="fa fa-lock"></i>
+						Admin Area
+					</a>
+				</li>
+			</g:if>
+			<li><a class="banner-imod" href="${createLink(uri: '/imod')}">
+				<i class="fa fa-list-alt"></i>
+				<g:message code="My i-mods"/>
+			</a></li>
+			<li><a class="banner-home" href="${createLink(uri: '/')}">
+				<i class="fa fa-home"></i>
+				<g:message code="default.home.label"/>
+			</a></li>
+			<li>
+				<a href='http://imod.poly.asu.edu/uploads/2/9/6/3/29635095/imods-usermanual.pdf' target="_blank" id='logout-link' class='banner-link'>
+					<i class="fa fa-file-pdf-o"></i>
+					User Manual
+				</a>
+			</li>
+			<sec:ifLoggedIn>
+				<li>
+					<a href='${createLink(uri: '/settings')}' id='logout-link' class='banner-link'>
+						<i class="fa fa-user"></i>
+						Profile
+					</a>
+				</li>
+				<li>
+					<a href='${createLink(uri: '/logout')}' id='logout-link' class='banner-link'>
+						<i class="fa fa-sign-out"></i>
+						Logout
+					</a></li>
+			</sec:ifLoggedIn>
 
+			<sec:ifNotLoggedIn>
+				<li><a href="${createLink(uri: '/login')}" id="loginLink" class="banner-link">
+					<i class="fa fa-sign-in"></i>
+					Login
+				</a></li>
+			</sec:ifNotLoggedIn>
+
+			<sec:ifSwitched>
+				<li><a href="${request.contextPath}/j_spring_security_exit_user">
+					Resume as
+				</a></li>
+				<sec:switchedUserOriginalUsername/>
+			</sec:ifSwitched>
+		</ul>
+	</div>
+</div>
+%{--<sec:ifLoggedIn>--}%
+%{--<div id="progressbar"><div class="progress-label">Loading...</div></div>--}%
+%{--</sec:ifLoggedIn>--}%
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <a href="http://guides.grails.org" target="_blank">
-                    <asset:image src="advancedgrails.svg" alt="Grails Guides" class="float-left"/>
-                </a>
-                <strong class="centered"><a href="http://guides.grails.org" target="_blank">Grails Guides</a></strong>
-                <p>Building your first Grails app? Looking to add security, or create a Single-Page-App? Check out the <a href="http://guides.grails.org" target="_blank">Grails Guides</a> for step-by-step tutorials.</p>
-
-            </div>
-            <div class="col">
-                <a href="http://docs.grails.org" target="_blank">
-                    <asset:image src="documentation.svg" alt="Grails Documentation" class="float-left"/>
-                </a>
-                <strong class="centered"><a href="http://docs.grails.org" target="_blank">Documentation</a></strong>
-                <p>Ready to dig in? You can find in-depth documentation for all the features of Grails in the <a href="http://docs.grails.org" target="_blank">User Guide</a>.</p>
-
-            </div>
-            <div class="col">
-                <a href="https://slack.grails.org" target="_blank">
-                    <asset:image src="slack.svg" alt="Grails Slack" class="float-left"/>
-                </a>
-                <strong class="centered"><a href="https://slack.grails.org" target="_blank">Join the Community</a></strong>
-                <p>Get feedback and share your experience with other Grails developers in the community <a href="https://slack.grails.org" target="_blank">Slack channel</a>.</p>
-            </div>
-        </div>
-    </div>
+	Copyright &copy; 2015 IMODS&trade;
 </div>
 
-<div id="spinner" class="spinner" style="display:none;">
-    <g:message code="spinner.alt" default="Loading&hellip;"/>
+<div id="save-before-leaving" title="Please Save">
+	<p>
+		Please save before proceeding to next page.
+	</p>
 </div>
-
-<asset:javascript src="application.js"/>
-
 </body>
 </html>
