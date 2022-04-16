@@ -143,3 +143,5 @@ this is the basic layout with only the IMOD header and footer
 </div>
 </body>
 </html>
+© 2022 GitHub, Inc.
+Terms
