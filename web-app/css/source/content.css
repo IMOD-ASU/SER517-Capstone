@@ -1,0 +1,133 @@
+#contentTable {
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+
+    border: 1px solid;
+}
+.content-buttons {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 15%;
+
+    text-align: right;
+
+    background: none !important;
+}
+
+.topic-chart {
+	text-align: center;
+}
+
+.topic-chart h4 {
+	font-size: 16px;
+}
+
+.topic-chart .pie-legend {
+	padding-top: 10px;
+}
+
+.topic-chart .pie-legend li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.topic-chart .pie-legend li span {
+	display: inline-block;
+	vertical-align: middle;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.topic-chart .pie-legend .pie-legend-icon {
+	width: 30px;
+	height: 14px;
+}
+
+#chart {
+    display: block;
+
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.message.banner {
+    visibility: hidden;
+}
+
+#legendTable {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0;
+}
+#legendTable thead tr:last-child {
+    width: 4em;
+    padding-right: 10px;
+}
+#legendTable tbody * {
+    vertical-align: middle;
+}
+
+#legendTable tbody img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+#legendTable tr {
+    border-top: 1px solid #c4c2c2;
+    border-bottom: 1px solid #c4c2c2;
+}
+
+#legendTable td {
+    padding: 5px;
+}
+
+#legend {
+    float: left;
+
+    width: 13.5%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 1%;
+
+    border: 1px solid;
+}
+
+.legendFS {
+    height: 2em;
+}
+
+#legendTitle {
+    position: relative;
+    top: 15%;
+
+    font-weight: bold;
+}
+
+#legendC {
+    color: #caccce;
+}
+
+#legendF {
+    color: #ec008b;
+}
+#legendM {
+    color: #38b449;
+}
+#legendP {
+    color: #2879be;
+}
+
+.paddingFix {
+    height: 70px;
+}
+
+#help-video{
+	top:-5px !important;
+	left:101.5% !important;
+}
