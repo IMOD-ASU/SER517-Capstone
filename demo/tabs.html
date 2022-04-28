@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="layout" content="main"/>
+		<title>
+			Welcome to IMODS&trade;
+		</title>
+		<link rel="stylesheet" href="tabs.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	</head>
+
+	<body>
+<div id ="nav">
+		<ul>
+		  <li><a class="active" href="#imod">Home</a></li>
+		  <li><a href="#cousreoverview">New Imods</a></li>
+		</ul>
+		</div>
+<h3>Please enter course overview data followed by learning objectives and contents</h3>
+  <div class="tab">
+    <button class="tablinks" onclick="clickHandle(event, 'Course Overview')">Course Overview</button>
+    <button class="tablinks" onclick="clickHandle(event, 'Learning Objective')">Learning Objective</button>
+    <button class="tablinks" onclick="clickHandle(event, 'Content')">Content</button>
+	<button class="tablinks" onclick="clickHandle(event, 'Assessment')">Assessment</button>
+	<button class="tablinks" onclick="clickHandle(event, 'Pedagogy')">Pedagogy</button>
+  </div>
+
+  <div id="Course Overview" class="tabcontent" style = "display:block" >
+    <h3>Course Overview.</h3>
+  </div>
+
+  <div id="Learning Objective" class="tabcontent" style = "display:none"> 
+    <h3>Learning Objective.</h3>
+  </div>
+
+  <div id="Content" class="tabcontent" style = "display:none">
+    <h3>Content.</h3>
+</div>
+
+  <div id="Assessment" class="tabcontent" style = "display:none">
+    <h3>Assessment.</h3>
+	  <div id="first" class="divSquare" style="width: 25%; float:left;">
+		<div id="f1"class="divSquare" style="width: 95%; height:45%;  float:left;">
+			<h3>Learning Objectives</h3>
+			<h5> LO1 </h5>
+			<h5> LO2 </h5>
+			<h5> LO3 </h5>
+			
+		</div>
+		<div id="third" class="divSquare" style="width: 95%; height:45%;float:left;">
+			<h3>Filter Options</h3>
+			<div class="sidenav">
+			  <button class="dropdown-btn"><i class="arrow down"></i>  Knowledge Dimensions 
+				
+			  </button>
+			  <div class="dropdown-container">
+				<form action="/action_page.php">
+				  <input type="checkbox" >
+				  <label for="vehicle1"> Factual</label><br>
+				  <input type="checkbox" >
+				  <label for="vehicle2"> Conceptual</label><br>
+				  <input type="checkbox" >
+				  <label for="vehicle3"> Procedural</label><br>
+				  <input type="checkbox" >
+				  <label for="vehicle3"> Metaognitive</label><br><br>
+				</form>
+			  
+			</div>
+			<button class="dropdown-btn"><i class="arrow down"></i>  Learning Domains 
+				
+			  </button>
+			  <div class="dropdown-container">
+				<form action="/action_page.php">
+				  <input type="checkbox" >
+				  <label for="vehicle1"> Cognitive</label><br>
+				  <input type="checkbox" >
+				  <label for="vehicle2"> Affective</label><br>
+				  <input type="checkbox" >
+				  <label for="vehicle3"> Pyschomotor</label><br><br>
+				</form>
+			  
+			</div>
+			<button class="dropdown-btn"><i class="arrow down"></i>  Domain Categories
+				
+			  </button>
+			  <div class="dropdown-container">
+				<form action="/action_page.php">
+				  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+				  <label for="vehicle1"> A</label><br>
+				  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+				  <label for="vehicle2"> B</label><br>
+				  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+				  <label for="vehicle3"> C</label><br><br>
+				</form>
+			  
+			</div>
+	  </div>
+	  </div>
+	  </div>
+	  <div id="second" class="divSquare" style="width: 70%; float:left;">
+			<h3>Ideal Matches</h3>
+			<div class="sidenav">
+			  <button class="dropdown-btn"><i class="arrow down"></i>  Ideal Matches 
+			
+			  </button>
+			  <div class="dropdown-container">
+				<form action="/action_page.php">
+				  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+				  <label for="vehicle1"> A</label><br>
+				  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+				  <label for="vehicle2"> B</label><br>
+				  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+				  <label for="vehicle3"> C</label><br><br>
+				</form>
+			  
+			</div>
+			<button class="dropdown-btn"><i class="arrow down"></i>  Extended Matches 
+				
+			  </button>
+			  <div class="dropdown-container">
+				<form action="/action_page.php">
+				  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+				  <label for="vehicle1"> A</label><br>
+				  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+				  <label for="vehicle2"> B</label><br>
+				  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+				  <label for="vehicle3"> C</label><br><br>
+				</form>
+			  
+			</div>
+			<button class="dropdown-btn"><i class="arrow down"></i>  My Techniques
+				
+			  </button>
+			  <div class="dropdown-container">
+				<form action="/action_page.php">
+				  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+				  <label for="vehicle1"> A</label><br>
+				  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+				  <label for="vehicle2"> B</label><br>
+				  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+				  <label for="vehicle3"> C</label><br><br>
+				</form>
+			  
+			</div>
+	  </div>
+	  </div>
+</div>
+  <div id="Pedagogy" class="tabcontent" style = "display:none">
+    <h3>Pedagogy.</h3>
+</div>
+
+<script>
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+function clickHandle(evt, tab) {
+  let i, tabcontent, tablinks;
+
+  // This is to clear the previous clicked content.
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Set the tab to be "active".
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Display the clicked tab and set it to active.
+  document.getElementById(tab).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+   
+   
+	</body>
+</html>
