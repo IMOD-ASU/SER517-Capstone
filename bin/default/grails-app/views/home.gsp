@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script>
-		function press(){
-			var user = document.getElementById("Uname").value
-			var password = document.getElementById("Pass").value
-
-			if(user == "Instructor" && password == "abc"){
-				console.log("Login Sucessfull")
-				window.location = "http://localhost:8080/home";
-			} else {
-				alert("Invalid Credentials")
-			}
-		}
-	</script>
+	
 		<title>
 			Welcome to IMODS&trade;
 		</title>
@@ -1747,36 +1735,35 @@ Class for error message as label
 	padding: 5px 0px 5px 0px
 }
 
-</style>
+		</style>
 	</head>
 	<body>
 		<div id ="nav">
 		<ul>
-			 <li><a class="active" href="">IMODS</a></li>
-		 
+		  <li><a class="active" href="http://localhost:8080/">Logout</a></li>
+		  <li><a href="http://localhost:8080/imods">New Imods</a></li>
 		</ul>
 		</div>
 		<div id="page-body" role="main">
 			<h1>
-				LOGIN
+				Welcome to IMODS&trade;
 			</h1>
 			<p>
-				
+				The Instructional Module Development (IMOD&trade;)
+				system guides instructors, step-by-step, through an
+				outcome-based education process as they define learning
+				objectives, select content to be covered, and define the
+				learning environment and context for their course(s). The
+				IMOD&trade; software system uses Semantic Web technologies
+				to provide intelligent interactions with users; dictate a
+				course design process in conformance with the underlying
+				framework and provides feedback to the user on their
+				course design.
 			</p>
 			<br/>
 			<br/>
 			<br/>
-		<div>
-			<form class="form-inline" action="/action_page.php">
-			<label for="email">User Name</label>
-			<input type="email" name="Uname" id="Uname" placeholder="Enter User Name"> <br><br>
-			<label for="pwd">Password:</label>
-			<input type="password" id="Pass" placeholder="Enter password" name="Pass"> <br><br>
-
-			
-			</form>
-			<button onClick="press()" class="button">Login</button> 
-		<div> 
+			<div id="imod-video" style="left:18%;position: relative"><iframe width="560" height="315" src="https://www.youtube.com/embed/tDhuZpAyc0w" frameborder="0" allowfullscreen></iframe></div>
 		</div>
 	</body>
 </html>

@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<script>
-		function press(){
-			var user = document.getElementById("Uname").value
-			var password = document.getElementById("Pass").value
 
-			if(user == "Instructor" && password == "abc"){
-				console.log("Login Sucessfull")
-				window.location = "http://localhost:8080/home";
-			} else {
-				alert("Invalid Credentials")
-			}
-		}
-	</script>
-		<title>
-			Welcome to IMODS&trade;
-		</title>
-		<style>
-			/*NAVIGATION BAR*/
+/*NAVIGATION BAR*/
 #nav {
     zoom: 1;
 
@@ -1746,37 +1727,3 @@ Class for error message as label
 	background-color: #1b4176;
 	padding: 5px 0px 5px 0px
 }
-
-</style>
-	</head>
-	<body>
-		<div id ="nav">
-		<ul>
-			 <li><a class="active" href="">IMODS</a></li>
-		 
-		</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>
-				LOGIN
-			</h1>
-			<p>
-				
-			</p>
-			<br/>
-			<br/>
-			<br/>
-		<div>
-			<form class="form-inline" action="/action_page.php">
-			<label for="email">User Name</label>
-			<input type="email" name="Uname" id="Uname" placeholder="Enter User Name"> <br><br>
-			<label for="pwd">Password:</label>
-			<input type="password" id="Pass" placeholder="Enter password" name="Pass"> <br><br>
-
-			
-			</form>
-			<button onClick="press()" class="button">Login</button> 
-		<div> 
-		</div>
-	</body>
-</html>
